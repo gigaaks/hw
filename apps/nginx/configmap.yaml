@@ -10,6 +10,6 @@ data:
       server_name _;
       location = / {
         default_type application/json;
-        return 200 '{"message":"hello world","service":"nginx"}';
+        return 200 '{"message":"hello GIGA world","service":"nginx"}';
       }
     }
