@@ -1,0 +1,8 @@
+replicaCount: 3
+
+backend: "http://nginx.nginx.svc.cluster.local/"
+
+service:
+  type: ClusterIP
+  httpPort: 5050
+  externalPort: 5050

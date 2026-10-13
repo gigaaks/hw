@@ -1,0 +1,56 @@
+# ==============================================================================
+# Helm-Specific Files
+# ==============================================================================
+# Packaged chart dependencies should not be committed if you use `helm dependency update`
+**/charts/*.tgz
+**/charts/
+
+# If you choose to commit untarred dependencies, you might still want to ignore the lockfile 
+# (though many teams prefer committing Chart.lock to pin exact sub-chart versions).
+# Chart.lock
+
+# ==============================================================================
+# Local and Sensitive Configuration Overrides
+# ==============================================================================
+# Local development value overrides containing credentials or environment-specific testing
+**/values-override.yaml
+**/values.override.yaml
+
+# Explicitly ignore files named secrets
+*secrets.yaml
+**/*.secret.yaml
+.env
+.env.*
+
+# ==============================================================================
+# Linting & Language Server Cache
+# ==============================================================================
+**/.helm_ls_cache/
+
+# ==============================================================================
+# OS & IDE Artifacts
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# JetBrains IDEs (IntelliJ, WebStorm, etc.)
+.idea/
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+*.kubeconfig
+kubeconfig

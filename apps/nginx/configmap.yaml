@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nginx-config
+  namespace: nginx
+data:
+  default.conf: |
+    server {
+      listen 80;
+      server_name _;
+      location = / {
+        default_type application/json;
+        return 200 '{"message":"hello world","service":"nginx"}';
+      }
+    }

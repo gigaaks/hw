@@ -1,0 +1,6 @@
+replicaCount: 3
+
+service:
+  type: ClusterIP
+  httpPort: 5050
+  externalPort: 5050

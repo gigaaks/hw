@@ -1,0 +1,6 @@
+replicaCount: 1
+
+service:
+  type: ClusterIP
+  httpPort: 9898
+  externalPort: 9898
